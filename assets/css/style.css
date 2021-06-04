@@ -81,7 +81,6 @@ header nav ul li a:hover {
     flex-wrap: wrap;
 }
 
-
 #info-box-one {
     display: flex;
     flex-wrap: wrap;
@@ -142,8 +141,6 @@ header nav ul li a:hover {
 
 /*  main css ends */
 
-
-
 /* header styles end /*
 /* footer styles start */
 
@@ -154,9 +151,7 @@ footer {
     background-position: 80%;
     padding: 20px 35px;
     background-color: var(--secondary-color);
-    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
   
 footer h1 {
@@ -181,9 +176,39 @@ footer a:hover {
 }
 /* end footer section */
 
+.save-button a {
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+}
 
+.save-button a:hover {
+    text-decoration: dashed underline overline;
+}
 
 /* header styles end /*
+
+/* main cards */
+
+.main-one-card,
+.main-two-card{
+    width: 600px;
+    height: 500px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+#info-box-one,
+#info-box-two{
+    height: 80%;
+}
+
+.search-bar-main,
+.second-search,
+.save-button{
+    margin: 15px;
+}
+
 /* favorite cards style */
 
 .cards{
@@ -193,8 +218,8 @@ footer a:hover {
     justify-content: space-around;
 }
 
-.card{
-    width: 200px;
+.favorite-card{
+    width: 360px;
     height: 500px;
     background-color: grey;
     border-radius: 10px;
