@@ -69,12 +69,6 @@ header nav ul li a:hover {
 
 }
 
-#info-box-one {
-
-
-
-}
-
 /* header styles end /*
 /* footer styles start */
 
@@ -119,13 +113,21 @@ footer a:hover {
 }
 
 .save-button a:hover {
-
- 
     text-decoration: dashed underline overline;
-    
 }
 
 /* header styles end /*
+
+/* main cards */
+
+.main-one-card,
+.main-two-card{
+    width: 600px;
+    height: 500px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
 /* favorite cards style */
 
 .cards{
@@ -135,7 +137,7 @@ footer a:hover {
     justify-content: space-around;
 }
 
-.card{
+.favorite-card{
     width: 360px;
     height: 500px;
     background-color: grey;
