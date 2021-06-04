@@ -52,3 +52,18 @@ header nav ul li a:hover {
 }
 
 /* header styles end /*
+/* favorite cards style */
+
+.cards{
+    margin: 10;
+    display: flex;
+    flex-wrap: flex;
+    justify-content: space-around;
+}
+
+.card{
+    width: 200px;
+    height: 500px;
+    background-color: grey;
+    border-radius: 10px;
+}
