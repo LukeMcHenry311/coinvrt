@@ -25,7 +25,6 @@ header {
 }
 
 header h1 {
-    font-weight: bold;
     margin: 0;
     font-size: 36px;
     color: var(--secondary-color);
@@ -49,9 +48,10 @@ header nav ul {
 
 header nav ul li a {
     padding: 10px 15px;
-    font-weight: lighter;
     font-size: 1.55vw;
+    color: grey;
 }
+
 header nav ul li a:hover {
     background: var(--secondary-color);
     color: var(--tertiary-color);
@@ -65,6 +65,14 @@ header nav ul li a:hover {
 
  /*  START FOR MAIN CONTENT OF INDEX PAGE */
 
+ .nav{
+    color: grey;
+    font-weight: bold;
+ }
+
+ .title{
+     font-weight: bolder;
+ }
 
 .main-container {
     display: flex;
