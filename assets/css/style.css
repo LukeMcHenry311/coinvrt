@@ -152,3 +152,10 @@ footer a:hover {
     background-color: grey;
     border-radius: 10px;
 }
+
+/* buttons style */
+.btn{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-weight: bold;
+}
