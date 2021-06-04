@@ -126,6 +126,17 @@ footer a:hover {
     border-radius: 10px;
 }
 
+#info-box-one,
+#info-box-two{
+    height: 80%;
+}
+
+.search-bar-main,
+.second-search,
+.save-button{
+    margin: 15px;
+}
+
 /* favorite cards style */
 
 .cards{
