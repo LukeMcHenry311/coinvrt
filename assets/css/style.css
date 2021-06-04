@@ -3,6 +3,10 @@
     --secondary-color: #201e20;
     --tertiary-color: #e0a06d;
 }
+
+body {
+    background-color: var(--secondary-color);
+}
 /* HEADER / NAV BAR STYLES START */
 
 * {
@@ -71,6 +75,42 @@ header nav ul li a:hover {
 
 }
 
+/* header styles end /*
+/* footer styles start */
+
+footer {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+    padding: 20px 35px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+footer h1 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 36px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+footer a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 10px 15px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+footer a:hover {
+    text-decoration: none;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 15px;
+    text-shadow: none;
+}
+/* end footer section */
 
 .save-button a {
     text-decoration: none;
@@ -80,7 +120,7 @@ header nav ul li a:hover {
 
 .save-button a:hover {
 
-   
+ 
     text-decoration: dashed underline overline;
     
 }
