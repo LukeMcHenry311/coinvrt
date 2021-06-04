@@ -85,9 +85,7 @@ footer {
     background-position: 80%;
     padding: 20px 35px;
     background-color: var(--secondary-color);
-    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
   
 footer h1 {
