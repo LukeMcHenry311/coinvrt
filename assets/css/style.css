@@ -58,6 +58,11 @@ header nav ul li a:hover {
     border-radius: 15px;
     text-shadow: none;
 }
+
+
+
+
+
  /*  START FOR MAIN CONTENT OF INDEX PAGE */
 
 
@@ -65,9 +70,76 @@ header nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 25px;
+    margin: 55px auto;
 
 }
+
+.search-bar-main {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+#info-box-one {
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid var(--tertiary-color);
+    height: 500px;
+    width: 400px;
+    border-radius: 30px;
+    color: var(--primary-color);
+    
+
+}
+
+
+
+.second-search {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    flex-wrap: wrap;
+    
+}
+
+#info-box-two {
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid var(--tertiary-color);
+    height: 500px;
+    width: 400px;
+    border-radius: 30px;
+    color: var(--primary-color);
+}
+
+.save-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    justify-content: space-around;
+    
+}
+
+.save-button a {
+    text-decoration: none;
+    color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.save-button a:hover {
+
+ 
+    text-decoration: none;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 15px;
+    text-shadow: none;
+    
+}
+
+/*  main css ends */
 
 /* header styles end /*
 /* footer styles start */
