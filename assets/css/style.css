@@ -57,6 +57,7 @@ header nav ul li a:hover {
     color: var(--tertiary-color);
     border-radius: 15px;
     text-shadow: none;
+    text-decoration: none;
 }
 
 
