@@ -6,7 +6,7 @@ $("#button-1").click(function(){
     //search term value
     var stuff = $("#search-1").val()
     //get data value
-    fetch(coinApiPrefix + "search?q=" + stuff).then(function(response){
+    fetch(coinApiPrefix + "search?q=" + stuff + "limit=1").then(function(response){
         response.json().then(function(data){
             //set name 1
             $("#coin-name-1").text(data.currencies[0].name)
