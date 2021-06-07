@@ -1,14 +1,29 @@
-var coinApiPrefix = "https://api.coinpaprika.com/v1/coins"
+var coinApiPrefix = "https://api.coinpaprika.com/v1/"
 var exchangeApiKey = "https://v6.exchangerate-api.com/v6/&f0106a145afb8388dcf1f3d0"
 
-//search token
-$("button").on("click", function(event){
-    // var search = this.closest("input").val()
-    console.log((event.target).closest("input"));
-
-    fetch(coinApiPrefix).then(function(response){
+//search token 1
+$("#button-1").click(function(){
+    //search term value
+    var stuff = $("#search-1").val()
+    //get data value
+    fetch(coinApiPrefix + "search?q=" + stuff + "limit=1").then(function(response){
         response.json().then(function(data){
-            // $("#coin-name-1").text(data)
+            //set name 1
+            $("#coin-name-1").text(data.currencies[0].name)
+        })
+    })
+})
+
+
+//search token 2
+$("#button-2").click(function(){
+    //search term value
+    var stuff = $("#search-2").val()
+    //get data from api
+    fetch(coinApiPrefix + "search?q=" + stuff).then(function(response){
+        response.json().then(function(data){
+            //set name 2
+            $("#coin-name-2").text(data.currencies[0].name)
         })
     })
 })
