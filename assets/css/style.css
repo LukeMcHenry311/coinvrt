@@ -178,6 +178,8 @@ footer a:hover {
     height: 500px;
     background-color: grey;
     border-radius: 10px;
+    border-color: var(--tertiary-color);
+    border-width: 2px;
 }
 
 #info-box-one,
@@ -224,4 +226,26 @@ footer a:hover {
 
 .oi-arrow-circle-bottom{
     color: red;
+}
+
+/* coin styles */
+.coin-name {
+    text-align: center;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.coin-ticker {
+    text-align: center;
+}
+.coin-price {
+    text-align: center;
+}
+.coin-rate {
+    text-align: center;
+}
+.arrow {
+    text-align: center;
+}
+#rate-1 {
+    text-align: center;
 }
