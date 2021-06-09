@@ -117,11 +117,10 @@ header nav ul li a:hover {
     text-decoration: none;
     color: var(--primary-color);
     border-radius: 10px;
+    padding: 5px;
 }
 
 .save-button a:hover {
-
- 
     text-decoration: none;
     background: var(--primary-color);
     color: var(--secondary-color);
@@ -215,4 +214,14 @@ footer a:hover {
     font-weight: bold;
 }
 
+.btn:hover{
+    color: var(--tertiary-color);
+}
 
+.oi-arrow-circle-top{
+    color: green;
+}
+
+.oi-arrow-circle-bottom{
+    color: red;
+}
