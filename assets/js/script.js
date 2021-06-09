@@ -10,12 +10,12 @@ $("#button-1").click(function(){
         response.json().then(function(data){
             //set name 1
             $("#coin-name-1").text(data.currencies[0].name)
-            $("#ticker-1").text(data.currencies[0].symbol)
+            $("#ticker-1").text("Ticker Symbol: " + data.currencies[0].symbol)
             //get coin price
             fetch(coinApiPrefix + "tickers/" + data.currencies[0].id).then(function(response){
                 response.json().then(function(data){
                     //price data display
-                    $("#price-1").text("$ " + (data.quotes.USD.price).toFixed(2))
+                    $("#price-1").text("Current Price: $" + (data.quotes.USD.price).toFixed(2))
                     if(data.quotes.USD.percent_change_24h > 0){
                         $("#arrow-1").addClass("oi oi-arrow-circle-top")
                     }
@@ -37,13 +37,13 @@ $("#button-2").click(function(){
         response.json().then(function(data){
             //set name 2
             $("#coin-name-2").text(data.currencies[0].name)
-            $("#ticker-2").text(data.currencies[0].symbol)
+            $("#ticker-2").text("Ticker Symbol: " + data.currencies[0].symbol)
             $("#price-2")
             //get price info
             fetch(coinApiPrefix + "tickers/" + data.currencies[0].id).then(function(response){
                 response.json().then(function(data){
                     //display price info
-                    $("#price-2").text("$ " + (data.quotes.USD.price).toFixed(2))
+                    $("#price-2").text("Current Price: $" + (data.quotes.USD.price).toFixed(2))
                     if(data.quotes.USD.percent_change_24h > 0){
                         $("#arrow-2").addClass("oi oi-arrow-circle-top")
                     }
