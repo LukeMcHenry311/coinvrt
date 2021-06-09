@@ -48,6 +48,7 @@ $("#button-2").click(function(){
                         $("#arrow-2").addClass("oi oi-arrow-circle-top")
                     }
                     else if(data.quotes.USD.percent_change_24h < 0){
+                        stuff = 4
                         $("#arrow-2").addClass("oi oi-arrow-circle-bottom")
                     }
                 })
