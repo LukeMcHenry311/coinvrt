@@ -2,6 +2,8 @@ var coinApiPrefix = "https://api.coinpaprika.com/v1/"
 var exchangeApiKey = "https://v6.exchangerate-api.com/v6/&f0106a145afb8388dcf1f3d0"
 
 //search token 1
+
+
 $("#button-1").click(function(){
     //search term value
     var stuff = $("#search-1").val()
@@ -13,8 +15,12 @@ $("#button-1").click(function(){
             $("#ticker-1").text(data.currencies[0].symbol)
             $("#price-1")
         })
+
     })
+
 })
+
+
 
 
 //search token 2
@@ -30,6 +36,12 @@ $("#button-2").click(function(){
             $("#price-2")
         })
     })
+
 })
+
+
+
+
+
 
 //display name
