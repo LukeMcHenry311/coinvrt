@@ -1,6 +1,7 @@
 :root {
     --primary-color: #ddc3a5;
-    --secondary-color: #201e20;
+    /* --secondary-color: #201e20; */
+    --secondary-color: blue;
     --tertiary-color: #e0a06d;
 }
 
@@ -221,16 +222,26 @@ footer a:hover {
 }
 
 .oi-arrow {
-    text-align: center;
+    display:flex;
 }
 
 .oi-arrow-circle-top{
     color: #66ff00;
     text-align: center;
+    display:flex;
 }
 
 .oi-arrow-circle-bottom{
+    display: flex;
     color: red;
+    text-align: center;
+}
+
+.oi:empty:before {
+    display: flex;
+    font-size: 45px;
+    justify-content: center;
+    width: 100px;
     text-align: center;
 }
 
