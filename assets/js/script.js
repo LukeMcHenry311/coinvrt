@@ -15,7 +15,11 @@ $("#button-1").click(function(){
             $("#ticker-1").text(data.currencies[0].symbol)
             fetch(coinApiPrefix + "tickers/" + data.currencies[0].id).then(function(response){
                 response.json().then(function(data){
+                    var convert = data.quotes.USD.price
                     $("#price-1").text("$ " + (data.quotes.USD.price).toFixed(2))
+                    fetch('https://v6.exchangerate-api.com/v6/2b123b2e2008af090ae16479/latest/USD')
+                    .then(response => response.json())
+                    .then(data => console.log(data));                    
                     if(data.quotes.USD.percent_change_24h > 0){
                         $("#arrow-1").addClass("oi oi-arrow-circle-top")
                     }
@@ -53,7 +57,3 @@ $("#button-2").click(function(){
 
 
 
-
-
-
-//display name
