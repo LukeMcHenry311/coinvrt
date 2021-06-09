@@ -6,10 +6,12 @@ $("#button-1").click(function(){
     //search term value
     var stuff = $("#search-1").val()
     //get data value
-    fetch(coinApiPrefix + "search?q=" + stuff + "limit=1").then(function(response){
+    fetch(coinApiPrefix + "search?q=" + stuff).then(function(response){
         response.json().then(function(data){
             //set name 1
             $("#coin-name-1").text(data.currencies[0].name)
+            $("#ticker-1").text(data.currencies[0].symbol)
+            $("#price-1")
         })
     })
 })
@@ -24,6 +26,8 @@ $("#button-2").click(function(){
         response.json().then(function(data){
             //set name 2
             $("#coin-name-2").text(data.currencies[0].name)
+            $("#ticker-2").text(data.currencies[0].symbol)
+            $("#price-2")
         })
     })
 })
