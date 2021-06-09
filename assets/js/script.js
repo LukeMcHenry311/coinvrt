@@ -11,7 +11,14 @@ $("#button-1").click(function(){
             //set name 1
             $("#coin-name-1").text(data.currencies[0].name)
             $("#ticker-1").text(data.currencies[0].symbol)
-            $("#price-1")
+            fetch(coinApiPrefix + "tickers/" + data.currencies[0].id).then(function(response){
+                response.json().then(function(data){
+                    $("#price-1").text("$ " + (data.quotes.USD.price).toFixed(2))
+                    if(data.quotes.USD.percent_change_24h > 0){
+                        $("#arrow-1").addClass("oi oi-arrow-circle-top")
+                    }
+                })
+            })
         })
     })
 })
@@ -28,6 +35,11 @@ $("#button-2").click(function(){
             $("#coin-name-2").text(data.currencies[0].name)
             $("#ticker-2").text(data.currencies[0].symbol)
             $("#price-2")
+            fetch(coinApiPrefix + "tickers/" + data.currencies[0].id).then(function(response){
+                response.json().then(function(data){
+                    $("#price-2").text("$ " + (data.quotes.USD.price).toFixed(2))
+                })
+            })
         })
     })
 })
