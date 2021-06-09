@@ -14,6 +14,10 @@ $("#button-1").click(function(){
             //get coin price
             fetch(coinApiPrefix + "tickers/" + data.currencies[0].id).then(function(response){
                 response.json().then(function(data){
+                    var convert = data.quotes.USD.price
+                    fetch('https://v6.exchangerate-api.com/v6/2b123b2e2008af090ae16479/latest/USD')
+                    .then(response => response.json())
+                    .then(data => console.log(data));
                     //price data display
                     $("#price-1").text("Current Price: $" + (data.quotes.USD.price).toFixed(2))
                     if(data.quotes.USD.percent_change_24h > 0){
