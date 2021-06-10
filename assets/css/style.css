@@ -1,7 +1,6 @@
 :root {
     --primary-color: #ddc3a5;
-    /* --secondary-color: #201e20; */
-    --secondary-color: blue;
+    --secondary-color: #201e20;
     --tertiary-color: #e0a06d;
 }
 
@@ -221,28 +220,23 @@ footer a:hover {
     color: var(--tertiary-color);
 }
 
-.oi-arrow {
-    display:flex;
+.arrow {
+    display: flex;
+    justify-content: center;
 }
 
 .oi-arrow-circle-top{
     color: #66ff00;
-    text-align: center;
-    display:flex;
 }
 
 .oi-arrow-circle-bottom{
     display: flex;
     color: red;
-    text-align: center;
 }
 
 .oi:empty:before {
     display: flex;
     font-size: 45px;
-    justify-content: center;
-    width: 100px;
-    text-align: center;
 }
 
 /* coin styles */
