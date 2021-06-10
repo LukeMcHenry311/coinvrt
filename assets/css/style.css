@@ -178,6 +178,8 @@ footer a:hover {
     height: 500px;
     background-color: grey;
     border-radius: 10px;
+    border-color: var(--tertiary-color);
+    border-width: 2px;
 }
 
 #info-box-one,
@@ -218,10 +220,39 @@ footer a:hover {
     color: var(--tertiary-color);
 }
 
+.arrow {
+    display: flex;
+    justify-content: center;
+}
+
 .oi-arrow-circle-top{
-    color: green;
+    color: #66ff00;
 }
 
 .oi-arrow-circle-bottom{
+    display: flex;
     color: red;
+}
+
+.oi:empty:before {
+    display: flex;
+    font-size: 45px;
+}
+
+/* coin styles */
+.coin-name {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.coin-ticker {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+.coin-price {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
