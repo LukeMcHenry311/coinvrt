@@ -220,9 +220,12 @@ footer a:hover {
     color: var(--tertiary-color);
 }
 
+/* arrow styles */
 .arrow {
     display: flex;
     justify-content: center;
+    margin-left: 263px;
+    font-size: 60px;
 }
 
 .oi-arrow-circle-top{
@@ -234,10 +237,7 @@ footer a:hover {
     color: red;
 }
 
-.oi:empty:before {
-    display: flex;
-    font-size: 45px;
-}
+/* end arrow start coin */
 
 /* coin styles */
 .coin-name {
@@ -255,4 +255,84 @@ footer a:hover {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+}
+
+.coin-rate {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* experiment */
+
+.oi:empty:before {
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    margin-left: 263px;
+}
+
+label {
+    margin-top: 20px;
+    margin-left: 137px;
+    font-size: 20px;
+}
+
+@media screen and (max-width:480px) {
+    :root {
+        --primary-color: #ddc3a5;
+        --secondary-color: blue;
+        --tertiary-color: #e0a06d;
+    }
+    header nav ul li a {
+        font-size: 4.55vw;
+    }
+    .main-one-card, .main-two-card {
+        margin-bottom: 10px;
+    }
+    .coin-price {
+        font-size: 25px;
+    }
+    .oi:empty:before {
+        margin-left: 150px;
+    }
+    label {
+        margin-left: 18px;
+    }
+    .coin-rate {
+        font-size: 25px;
+    }
+    footer a {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:280px) {
+    :root {
+        --primary-color: #ddc3a5;
+        --secondary-color: green;
+        --tertiary-color: #e0a06d;
+    }
+    header nav ul li a {
+        font-size: 6.55vw;
+    }
+    .coin-name {
+        font-size: 35px;
+    }
+    .coin-ticker {
+        font-size: 23px;
+    }
+    .oi:empty:before {
+        margin-left: 122px;
+        font-size: 30px;
+    }
+    label {
+        margin-left: 53px;
+        font-size: 22px;
+    }
+    select {
+        margin-left: 63px;
+    }
+    footer a {
+        font-size: 14px;
+    }
 }
