@@ -5,7 +5,7 @@ var exchangeApiKey = "https://v6.exchangerate-api.com/v6/&f0106a145afb8388dcf1f3
 //search token 1
 $("#button-1").click(function(){
     //search term value
-    var searchTerm = $("#search-1").val()
+    var searchTerm = $("#search-1").val().trim()
     //get data value
     fetch(coinApiPrefix + "search?q=" + searchTerm).then(function(response){
         response.json().then(function(data){
@@ -68,6 +68,18 @@ $("#button-1").click(function(){
                     else if(data.quotes.USD.percent_change_24h < 0){
                         $("#arrow-1").addClass("oi oi-arrow-circle-bottom")
                     }
+
+                    //coin compare and display
+                    if(!$("#price-1").text() || !$("#price-2").text()){
+                        
+                    }
+                    else{
+                        var price1 = $("#price-1").text().split("$")[1]
+                        var price2 = $("#price-2").text().split("$")[1]
+                        $("#coin-compare-1").text("1 " + $("#ticker-1").text().split(" ")[2] + " = " + (price2 / price1).toFixed(2) + " " + $("#ticker-2").text().split(" ")[2])
+                        $("#coin-compare-2").text("1 " + $("#ticker-2").text().split(" ")[2] + " = " + (price1 / price2).toFixed(2) + " " + $("#ticker-1").text().split(" ")[2])
+                    }
+
                     $(".save-button").click(function() {
 
                         var button1Info = {
@@ -96,7 +108,7 @@ $("#button-1").click(function(){
 //search token 2
 $("#button-2").click(function(){
     //search term value
-    var searchTerm = $("#search-2").val()
+    var searchTerm = $("#search-2").val().trim()
     //get data from api
     fetch(coinApiPrefix + "search?q=" + searchTerm).then(function(response){
         response.json().then(function(data){
@@ -160,7 +172,19 @@ $("#button-2").click(function(){
                     else if(data.quotes.USD.percent_change_24h < 0){
                         $("#arrow-2").addClass("oi oi-arrow-circle-bottom")
                     }
-                    $(".save-button").click("click", function(){
+
+                    //coin compare and display
+                    if(!$("#price-1").text() || !$("#price-2").text()){
+                        
+                    }
+                    else{
+                        var price1 = $("#price-1").text().split("$")[1]
+                        var price2 = $("#price-2").text().split("$")[1]
+                        $("#coin-compare-1").text("1 " + $("#ticker-1").text().split(" ")[2] + " = " + (price2 / price1).toFixed(2) + " " + $("#ticker-2").text().split(" ")[2])
+                        $("#coin-compare-2").text("1 " + $("#ticker-2").text().split(" ")[2] + " = " + (price1 / price2).toFixed(2) + " " + $("#ticker-1").text().split(" ")[2])
+                    }
+
+                    $("#search-2").click("click", function(){
                         var button2Info = {
                             name: $("#coin-name-2").text(),
                             ticker: $("#ticker-2").text(),
@@ -185,7 +209,7 @@ $("#button-2").click(function(){
 //update when an option is chosen
 $("#currency-1").change(function(){
     //search term value
-    var searchTerm = $("#search-1").val()
+    var searchTerm = $("#search-1").val().trim()
     //get data value
     fetch(coinApiPrefix + "search?q=" + searchTerm).then(function(response){
         response.json().then(function(data){
@@ -243,7 +267,7 @@ $("#currency-1").change(function(){
 
 $("#currency-2").change(function(){
     //search term value
-    var searchTerm = $("#search-2").val()
+    var searchTerm = $("#search-2").val().trim()
     //get data value
     fetch(coinApiPrefix + "search?q=" + searchTerm).then(function(response){
         response.json().then(function(data){
@@ -298,6 +322,4 @@ $("#currency-2").change(function(){
         })
     })
 })
-
-
 
