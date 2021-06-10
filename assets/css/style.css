@@ -279,11 +279,6 @@ label {
 }
 
 @media screen and (max-width:480px) {
-    :root {
-        --primary-color: #ddc3a5;
-        --secondary-color: blue;
-        --tertiary-color: #e0a06d;
-    }
     header nav ul li a {
         font-size: 4.55vw;
     }
@@ -307,11 +302,6 @@ label {
     }
 }
 @media screen and (max-width:280px) {
-    :root {
-        --primary-color: #ddc3a5;
-        --secondary-color: green;
-        --tertiary-color: #e0a06d;
-    }
     header nav ul li a {
         font-size: 6.55vw;
     }
