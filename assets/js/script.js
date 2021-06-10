@@ -10,8 +10,8 @@ $("#button-1").click(function(){
     fetch(coinApiPrefix + "search?q=" + searchTerm).then(function(response){
         response.json().then(function(data){
             //set name 1
-            $("#coin-name-1").text(data.currencies[0].name)
-            $("#ticker-1").text("Ticker Symbol: " + data.currencies[0].symbol)
+          $("#coin-name-1").text(data.currencies[0].name)
+           $("#ticker-1").text("Ticker Symbol: " + data.currencies[0].symbol)
             //get coin price
             fetch(coinApiPrefix + "tickers/" + data.currencies[0].id).then(function(response){
                 response.json().then(function(data){
@@ -59,7 +59,7 @@ $("#button-1").click(function(){
                             $("#rate-1").html(currencySymbol + (data.conversion_rate * convert).toFixed(2))
                         });
                     //price data display
-                    $("#price-1").text("Current Price: $" + convert.toFixed(2))
+                   $("#price-1").text("Current Price: $" + convert.toFixed(2))
                     //up or down arrow
                     $("#arrow-1").removeClass()
                     if(data.quotes.USD.percent_change_24h > 0){
@@ -83,14 +83,15 @@ $("#button-1").click(function(){
                     $(".save-button").click(function() {
 
                         var button1Info = {
-                            name: $("#coin-name-1").val(),
-                            ticker: $("#ticker-1").val(),
-                            price: $("#price-1").val(),
-                            rate: $("#rate-1").val()
+                            name: $("#coin-name-1").text(),
+                            ticker: $("#ticker-1").text(),
+                            price: $("#price-1").text(),
+  
                         };
                         
+                        localStorage.setItem("button1savedinfo", JSON.stringify(button1Info));
                     
-                        console.log(JSON.stringify($("#coin-name-1").val()));
+                        
                         
                     })
                 })
@@ -185,15 +186,18 @@ $("#button-2").click(function(){
 
                     $("#search-2").click("click", function(){
                         var button2Info = {
-                            name: $("#coin-name-2").val(),
-                            ticker: $("#ticker-2").val(),
-                            price: $("#price-2").val(),
-                            rate: $("#rate-2").val()
+                            name: $("#coin-name-2").text(),
+                            ticker: $("#ticker-2").text(),
+                            price: $("#price-2").text()
+                            
                         };
+
+                        localStorage.setItem("button2savedinfo", JSON.stringify(button2Info));
+                        
                         
                     })
                    
-                    console.log(JSON.stringify($("#coin-name-2").val()));
+                    
                 })
             })
         })
@@ -318,5 +322,4 @@ $("#currency-2").change(function(){
         })
     })
 })
-
 
