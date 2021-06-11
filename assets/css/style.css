@@ -122,6 +122,22 @@ header nav ul li a:hover {
 /*  main css ends */
 
 /* header styles end /*
+
+/* HIDE STYLES */
+
+.hide {
+    display: none;
+    visibility: none;
+}
+
+.hide2 {
+    display: none;
+    visibility: none;
+}
+
+
+/* END HIDE STYLES */
+
 /* footer styles start */
 
 footer {
