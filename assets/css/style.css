@@ -269,8 +269,7 @@ label {
 }
 
 #coin-compare-1, #coin-compare-2 {
-    color: blue;
-    margin-left:210px;
+    margin-left:215px;
     font-size: 17px;
 }
 
@@ -286,10 +285,10 @@ label {
         font-size: 25px;
     }
     .oi:empty:before {
-        margin-left: 150px;
+        margin-left: 211px;
     }
     label {
-        margin-left: 18px;
+        margin-left: 75px;
     }
     .coin-rate {
         font-size: 25px;
@@ -297,16 +296,40 @@ label {
     footer a {
         font-size: 20px;
     }
+    #coin-compare-1, #coin-compare-2 {
+        margin-left: 150px;
+        font-size: 17px;
+    }
 }
-@media screen and (max-width:280px) {
+
+@media screen and (max-width:375px) {
+    .coin-name {
+        font-size: 35px;
+    }
+    .oi:empty:before {
+        margin-left: 157px;
+    }
+    label {
+        margin-left: 20px;
+    }
+    #coin-compare-1, #coin-compare-2 {
+        margin-left: 115px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:320px) {
     header nav ul li a {
         font-size: 6.55vw;
     }
     .coin-name {
-        font-size: 35px;
+        font-size: 25px;
+    }
+    .coin-price {
+        font-size: 20px;
     }
     .coin-ticker {
-        font-size: 23px;
+        font-size: 20px;
     }
     .oi:empty:before {
         margin-left: 122px;
@@ -321,5 +344,9 @@ label {
     }
     footer a {
         font-size: 14px;
+    }
+    #coin-compare-1, #coin-compare-2 {
+        margin-left: 50px;
+        font-size: 17px;
     }
 }
