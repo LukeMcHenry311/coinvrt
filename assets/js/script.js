@@ -323,3 +323,12 @@ $("#currency-2").change(function(){
     })
 })
 
+function myFunction() {
+    var element = document.getElementById("hello");
+    element.classList.remove("hide")
+}
+
+function myFunction2() {
+    var element = document.getElementById("heyhey");
+    element.classList.remove("hide2");
+}
