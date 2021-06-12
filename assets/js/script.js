@@ -80,22 +80,7 @@ $("#button-1").click(function(){
                         $("#coin-compare-2").text("1 " + $("#ticker-2").text().split(" ")[2] + " = " + (price1 / price2).toFixed(2) + " " + $("#ticker-1").text().split(" ")[2])
                     }
 
-                    $(".save-button").click(function() {
-
-                        var button1Info = {
-                            favName: $("#coin-name-1").text(),
-                            favTicker: $("#ticker-1").text(),
-                            favPrice: $("#price-1").text(),
-  
-                        };
-
-                        storageArray.push(JSON.stringify(button1Info))
-                        localStorage.setItem("storage", storageArray);
-                        console.log(storageArray)
-                        
-                        
-                        
-                    })
+                    
                 })
             })
             
@@ -106,6 +91,23 @@ $("#button-1").click(function(){
 } */
 })
 
+$(".save-button").click(function() {
+
+    var button1Info = {
+        favName: $("#coin-name-1").text(),
+        favTicker: $("#ticker-1").text(),
+        favPrice: $("#price-1").text(),
+
+    };
+
+    storageArray.push(JSON.stringify(button1Info))
+    localStorage.setItem("storage", storageArray);
+    // console.log(storageArray)
+    console.log(button1Info)
+    
+    
+    
+})
 
 //search token 2
 $("#button-2").click(function(){
@@ -345,10 +347,10 @@ function loadSaved1() {
     if(!localStorage.getItem("storage")) {
         return false;
     } else {
-        console.log(saveInfo);
-        var saveInfo = JSON.parse(localStorage.getItem("storage"));
-        console.log(saveInfo.favName);
-        $("#fav-name-1").text(saveInfo.favName);
+        for(var i = 0; i < 5; i++){
+            var saveInfo = JSON.parse(localStorage.getItem("storage"));
+            $("#fav-name-" + (i + 1)).text(saveInfo.favName);
+        }
         
     }
 }
