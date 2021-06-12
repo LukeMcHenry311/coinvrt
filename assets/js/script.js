@@ -326,8 +326,6 @@ $("#currency-2").change(function(){
     })
 })
 
-
-
 function loadSaved1() {
 
 
@@ -340,14 +338,10 @@ function loadSaved1() {
         console.log(saveInfo);
         var saveInfo = JSON.parse(localStorage.getItem("storageArray"));
        // $("#fav-name-1").val(saveInfo[0].favName);
-
         console.log(saveInfo);
     }
-    
-
     console.log("test");
-
-
 }
 
 loadSaved1();
+
