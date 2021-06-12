@@ -93,6 +93,11 @@ $("#button-1").click(function(){
 
 $(".save-button").click(function() {
 
+                        if(localStorage.getItem("storage")){
+                            storageArray = JSON.parse(localStorage.getItem("storage"))
+                            console.log(storageArray)
+                        }
+
                         var button1Info = {
                             favName: $("#coin-name-1").text(),
                             favTicker: $("#ticker-1").text(),
@@ -101,10 +106,10 @@ $(".save-button").click(function() {
                         };
 
                         storageArray.push(button1Info)
+                        if(storageArray.length > 5){
+                            storageArray.shift()
+                        }
                         localStorage.setItem("storage", JSON.stringify(storageArray));
-                        // console.log(storageArray)
-                        console.log(button1Info)
-                        
                         
                         
                     })
