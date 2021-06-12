@@ -93,21 +93,21 @@ $("#button-1").click(function(){
 
 $(".save-button").click(function() {
 
-    var button1Info = {
-        favName: $("#coin-name-1").text(),
-        favTicker: $("#ticker-1").text(),
-        favPrice: $("#price-1").text(),
+                        var button1Info = {
+                            favName: $("#coin-name-1").text(),
+                            favTicker: $("#ticker-1").text(),
+                            favPrice: $("#price-1").text(),
+  
+                        };
 
-    };
-
-    storageArray.push(JSON.stringify(button1Info))
-    localStorage.setItem("storage", storageArray);
-    // console.log(storageArray)
-    console.log(button1Info)
-    
-    
-    
-})
+                        storageArray.push(button1Info)
+                        localStorage.setItem("storage", JSON.stringify(storageArray));
+                        // console.log(storageArray)
+                        console.log(button1Info)
+                        
+                        
+                        
+                    })
 
 //search token 2
 $("#button-2").click(function(){
@@ -349,7 +349,7 @@ function loadSaved1() {
     } else {
         for(var i = 0; i < 5; i++){
             var saveInfo = JSON.parse(localStorage.getItem("storage"));
-            $("#fav-name-" + (i + 1)).text(saveInfo.favName);
+            $("#fav-name-1").text(saveInfo.favName);
         }
         
     }
