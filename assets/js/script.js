@@ -349,7 +349,7 @@ function loadSaved1() {
     } else {
         for(var i = 0; i < 5; i++){
             var saveInfo = JSON.parse(localStorage.getItem("storage"));
-            $("#fav-name-1").text(saveInfo.favName);
+            $("#fav-name-" + (i + 1)).text(saveInfo[i].favName);
         }
         
     }
