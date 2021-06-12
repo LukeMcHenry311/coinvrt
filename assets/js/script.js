@@ -88,9 +88,10 @@ $("#button-1").click(function(){
                             favPrice: $("#price-1").text(),
   
                         };
-                        
-                        localStorage.setItem("storageArray", JSON.stringify(button1Info));
-                        
+
+                        storageArray.push(JSON.stringify(button1Info))
+                        localStorage.setItem("storage", storageArray);
+                        console.log(storageArray)
                         
                         
                         
@@ -330,17 +331,15 @@ function loadSaved1() {
 
 
     // 
-    if(!storageArray) {
-        console.log(storageArray);
+    if(!localStorage.getItem("storage")) {
         return false;
-        console.log("hello");
     } else {
         console.log(saveInfo);
-        var saveInfo = JSON.parse(localStorage.getItem("storageArray"));
-       // $("#fav-name-1").val(saveInfo[0].favName);
-        console.log(saveInfo);
+        var saveInfo = JSON.parse(localStorage.getItem("storage"));
+        console.log(saveInfo.favName);
+        $("#fav-name-1").text(saveInfo.favName);
+        
     }
-    console.log("test");
 }
 
 loadSaved1();
