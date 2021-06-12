@@ -1,6 +1,6 @@
 var coinApiPrefix = "https://api.coinpaprika.com/v1/"
 var exchangeApiKey = "https://v6.exchangerate-api.com/v6/&f0106a145afb8388dcf1f3d0"
-
+var storageArray = [];
 
 //search token 1
 $("#button-1").click(function(){
@@ -83,14 +83,15 @@ $("#button-1").click(function(){
                     $(".save-button").click(function() {
 
                         var button1Info = {
-                            name: $("#coin-name-1").text(),
-                            ticker: $("#ticker-1").text(),
-                            price: $("#price-1").text(),
+                            favName: $("#coin-name-1").text(),
+                            favTicker: $("#ticker-1").text(),
+                            favPrice: $("#price-1").text(),
   
                         };
                         
-                        localStorage.setItem("button1savedinfo", JSON.stringify(button1Info));
-                    
+                        localStorage.setItem("storageArray", JSON.stringify(button1Info));
+                        
+                        
                         
                         
                     })
@@ -185,14 +186,16 @@ $("#button-2").click(function(){
                     }
 
                     $("#search-2").click("click", function(){
-                        var button2Info = {
-                            name: $("#coin-name-2").text(),
-                            ticker: $("#ticker-2").text(),
-                            price: $("#price-2").text()
+                        var button2Info = [{
+                            favName2: $("#coin-name-2").text(),
+                            favTicker2: $("#ticker-2").text(),
+                            favPrice2: $("#price-2").text()
                             
-                        };
+                        }];
 
                         localStorage.setItem("button2savedinfo", JSON.stringify(button2Info));
+
+
                         
                         
                     })
@@ -323,12 +326,22 @@ $("#currency-2").change(function(){
     })
 })
 
-function myFunction() {
-    var element = document.getElementById("hello");
-    element.classList.remove("hide")
+function loadSaved1() {
+
+
+    // 
+    if(!storageArray) {
+        console.log(storageArray);
+        return false;
+        console.log("hello");
+    } else {
+        console.log(saveInfo);
+        var saveInfo = JSON.parse(localStorage.getItem("storageArray"));
+       // $("#fav-name-1").val(saveInfo[0].favName);
+        console.log(saveInfo);
+    }
+    console.log("test");
 }
 
-function myFunction2() {
-    var element = document.getElementById("heyhey");
-    element.classList.remove("hide2");
-}
+loadSaved1();
+
