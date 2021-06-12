@@ -210,6 +210,17 @@ $("#button-2").click(function(){
 
     
 })
+
+function myFunction() {
+    var element = document.getElementById("hello");
+    element.classList.remove("hide")
+}
+
+function myFunction2() {
+    var element = document.getElementById("heyhey");
+    element.classList.remove("hide2");
+}
+
 //update when an option is chosen
 $("#currency-1").change(function(){
     //search term value
