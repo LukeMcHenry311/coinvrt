@@ -362,3 +362,19 @@ function loadSaved1() {
 
 loadSaved1();
 
+function loadSaved2() {
+
+
+    // 
+    if(!localStorage.getItem("storage")) {
+        return false;
+    } else {
+        for(var i = 0; i < 5; i++){
+            var saveInfo = JSON.parse(localStorage.getItem("storage"));
+            $("#coin-tick-" + (i + 1)).text(saveInfo[i].favTicker);
+        }
+        
+    }
+}
+
+loadSaved2();
