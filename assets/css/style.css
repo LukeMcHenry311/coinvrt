@@ -348,21 +348,21 @@ label {
         font-size: 20px;
     }
     .oi:empty:before {
-        margin-left: 122px;
-        font-size: 30px;
+        margin-left: 137px;
+        font-size: 42px;
     }
     label {
-        margin-left: 53px;
+        margin-left: 73px;
         font-size: 22px;
     }
     select {
-        margin-left: 63px;
+        margin-left: 80px;
     }
     footer a {
         font-size: 14px;
     }
     #coin-compare-1, #coin-compare-2 {
-        margin-left: 50px;
-        font-size: 17px;
+        margin-left: 70px;
+        font-size: 20px;
     }
 }
