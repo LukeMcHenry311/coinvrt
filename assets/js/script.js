@@ -4,6 +4,7 @@ var storageArray = [];
 
 //search token 1
 $("#button-1").click(function(){
+    myFunctionX();
     //search term value
     var searchTerm = $("#search-1").val().trim()
     //get data value
@@ -116,6 +117,7 @@ $(".save-button").click(function() {
 
 //search token 2
 $("#button-2").click(function(){
+    myFunctionY();
     //search term value
     var searchTerm = $("#search-2").val().trim()
     //get data from api
@@ -218,13 +220,13 @@ $("#button-2").click(function(){
     
 })
 
-function myFunction() {
-    var element = document.getElementById("hello");
-    element.classList.remove("hide")
+function myFunctionX() {
+    var element = document.getElementById("xyz");
+    element.classList.remove("hide");
 }
 
-function myFunction2() {
-    var element = document.getElementById("heyhey");
+function myFunctionY() {
+    var element = document.getElementById("xyz2");
     element.classList.remove("hide2");
 }
 
@@ -362,3 +364,36 @@ function loadSaved1() {
 
 loadSaved1();
 
+function loadSaved2() {
+
+
+    // 
+    if(!localStorage.getItem("storage")) {
+        return false;
+    } else {
+        for(var i = 0; i < 5; i++){
+            var saveInfo = JSON.parse(localStorage.getItem("storage"));
+            $("#ticker-" + (i + 1)).text(saveInfo[i].favTicker);
+        }
+        
+    }
+}
+
+loadSaved2();
+
+function loadSaved3() {
+
+
+    // 
+    if(!localStorage.getItem("storage")) {
+        return false;
+    } else {
+        for(var i = 0; i < 5; i++){
+            var saveInfo = JSON.parse(localStorage.getItem("storage"));
+            $("#price-" + (i + 1)).text(saveInfo[i].favPrice);
+        }
+        
+    }
+}
+
+loadSaved3();
