@@ -364,36 +364,36 @@ function loadSaved1() {
 
 loadSaved1();
 
-// function loadSaved2() {
+function loadSaved2() {
 
 
-//     // 
-//     if(!localStorage.getItem("storage")) {
-//         return false;
-//     } else {
-//         for(var i = 0; i < 5; i++){
-//             var saveInfo = JSON.parse(localStorage.getItem("storage"));
-//             $("#ticker-" + (i + 1)).text(saveInfo[i].favTicker);
-//         }
+    // 
+    if(!localStorage.getItem("storage")) {
+        return false;
+    } else {
+        for(var i = 0; i < 5; i++){
+            var saveInfo = JSON.parse(localStorage.getItem("storage"));
+            $("#ticker-" + (i + 1)).text(saveInfo[i].favTicker);
+        }
         
-//     }
-// }
+    }
+}
 
-// loadSaved2();
+loadSaved2();
 
-// function loadSaved3() {
+function loadSaved3() {
 
 
-//     // 
-//     if(!localStorage.getItem("storage")) {
-//         return false;
-//     } else {
-//         for(var i = 0; i < 5; i++){
-//             var saveInfo = JSON.parse(localStorage.getItem("storage"));
-//             $("#price-" + (i + 1)).text(saveInfo[i].favPrice);
-//         }
+    // 
+    if(!localStorage.getItem("storage")) {
+        return false;
+    } else {
+        for(var i = 0; i < 5; i++){
+            var saveInfo = JSON.parse(localStorage.getItem("storage"));
+            $("#price-" + (i + 1)).text(saveInfo[i].favPrice);
+        }
         
-//     }
-// }
+    }
+}
 
-// loadSaved3();
+loadSaved3();
